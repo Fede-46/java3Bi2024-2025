@@ -41,3 +41,4 @@ public class ContaVocaliConsonanti {
         }
         return contoConsonanti;
     }
+}
