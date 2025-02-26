@@ -7,7 +7,6 @@ public class TextProcessor {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digita un testo:");
         String testoInserito = scanner.nextLine();
-        scanner.close();
         
         String testoPulito = rimuoviPunteggiatura(testoInserito);
         int numeroParole = contaParole(testoPulito);
@@ -16,25 +15,32 @@ public class TextProcessor {
         System.out.println("Testo senza punteggiatura: " + testoPulito);
         System.out.println("Numero di parole: " + numeroParole);
         System.out.println("Lunghezza media delle parole: " + lunghezzaMedia);
+        
+        scanner.close(); 
     }
 
     public static String rimuoviPunteggiatura(String testo) {
-        return testo.replaceAll("[.,;:!?(){}\[\]'"]", "");
+        return testo.replaceAll("\\p{Punct}", "");  
     }
 
     public static int contaParole(String testo) {
         String[] parole = testo.trim().split("\\s+");
-        return parole.length;
+        return parole.length > 0 ? parole.length : 0; 
     }
 
     public static double calcolaLunghezzaMedia(String testo) {
         String[] parole = testo.trim().split("\\s+");
+        if (parole.length == 0) {
+            return 0; 
+        }
+        
         int lunghezzaTotale = 0;
         
         for (String parola : parole) {
             lunghezzaTotale += parola.length();
         }
         
-        return parole.length > 0 ? (double) lunghezzaTotale / parole.length : 0;
+        return (double) lunghezzaTotale / parole.length; 
     }
 }
+
