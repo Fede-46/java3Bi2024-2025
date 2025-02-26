@@ -17,12 +17,12 @@ public class Es_2 {
     }
 
     public static int contaParole(String testo) {
-        String[] parole = testo.trim().split("\\s+");
+        String[] parole = testo.trim().split("s+");
         return parole.length;
     }
 
     public static double calcolaLunghezzaMedia(String testo) {
-        String[] parole = testo.trim().split("\\s+");
+        String[] parole = testo.trim().split("s+");
         int lunghezzaTotale = 0;
         
         for (String parola : parole) {
