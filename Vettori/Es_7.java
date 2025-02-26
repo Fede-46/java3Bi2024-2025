@@ -1,0 +1,1 @@
+// 7. Determinare se la stringa è palindroma

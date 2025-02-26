@@ -1,0 +1,1 @@
+// 3. Eliminazione di caratteri di punteggiatura

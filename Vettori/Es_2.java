@@ -1,0 +1,1 @@
+// 2. Conteggio delle parole e visualizzazione della lunghezza media
