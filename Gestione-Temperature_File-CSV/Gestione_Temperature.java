@@ -16,3 +16,9 @@ public class TemperatureAnalysis {
         int[][] temperatures = data.toArray(new int[0][]);
         int days = temperatures.length;
 
+        // Calcola la media giornaliera delle temperature
+        double[] dailyAvg = new double[days];
+        double totalSum = 0;
+        int totalCount = 0;
+
+
