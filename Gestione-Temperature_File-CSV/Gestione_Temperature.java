@@ -39,3 +39,9 @@ public class TemperatureAnalysis {
         int minDay = -1, minHour = -1, maxDay = -1, maxHour = -1;
         int minCount = 0, maxCount = 0;
 
+        // Trova la temperatura minima e massima del mese
+        for (int i = 0; i < days; i++) {
+            for (int j = 1; j <= 4; j++) { // Scorriamo le temperature delle 4 fasce orarie
+                int temp = temperatures[i][j];
+
+
