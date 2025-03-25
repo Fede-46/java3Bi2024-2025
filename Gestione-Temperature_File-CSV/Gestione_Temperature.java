@@ -31,3 +31,6 @@ public class TemperatureAnalysis {
             totalCount += 4; // Aggiornare il numero totale di valori considerati
         }
 
+        // Calcola la media mensile delle temperature
+        double monthlyAvg = totalSum / totalCount;
+
