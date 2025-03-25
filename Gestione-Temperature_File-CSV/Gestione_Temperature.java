@@ -44,4 +44,16 @@ public class TemperatureAnalysis {
             for (int j = 1; j <= 4; j++) { // Scorriamo le temperature delle 4 fasce orarie
                 int temp = temperatures[i][j];
 
+                // Se troviamo una temperatura più bassa della minima attuale
+                if (temp < minTemp) {
+                    minTemp = temp; // Aggiorniamo la temperatura minima
+                    minDay = temperatures[i][0]; // Memorizziamo il giorno in cui è stata registrata
+                    minHour = j * 6; // Memorizziamo l'orario corrispondente (6, 12, 18, 24)
+                    minCount = 1; // Reset del conteggio delle occorrenze
+                } else if (temp == minTemp) { // Se la temperatura è uguale alla minima già trovata
+                    minCount++; // Incrementiamo il conteggio delle volte in cui si è registrata
+                    minDay = temperatures[i][0]; // Aggiorniamo con l'ultima occorrenza della temperatura minima
+                    minHour = j * 6;
+                }
+
 
