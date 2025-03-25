@@ -25,4 +25,9 @@ public class TemperatureAnalysis {
             int sum = 0;
             for (int j = 1; j <= 4; j++) {
                 sum += temperatures[i][j]; // Somma le temperature della giornata
+  }
+            dailyAvg[i] = sum / 4.0; // Calcola la media della giornata
+            totalSum += sum; // Aggiornare la somma totale delle temperature
+            totalCount += 4; // Aggiornare il numero totale di valori considerati
+        }
 
