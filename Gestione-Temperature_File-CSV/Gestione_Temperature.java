@@ -68,5 +68,13 @@ public class TemperatureAnalysis {
             }
         }
 
+        // Stampare i risultati
+        System.out.printf("Media giornaliera delle temperature: %.2f°C%n", monthlyAvg);
+        System.out.printf("Temperatura minima: %d°C, ultimo giorno registrato: %d, ora: %d:00%n", minTemp, minDay, minHour);
+        System.out.printf("Temperatura massima: %d°C, primo giorno registrato: %d, ora: %d:00%n", maxTemp, maxDay, maxHour);
+        System.out.printf("Numero di giorni in cui si è registrata la temperatura minima: %d%n", minCount / 4);
+        System.out.printf("Numero di giorni in cui si è registrata la temperatura massima: %d%n", maxCount / 4);
+    }
+}
 
 
