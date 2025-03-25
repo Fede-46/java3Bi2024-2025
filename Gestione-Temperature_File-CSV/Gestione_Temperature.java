@@ -21,4 +21,8 @@ public class TemperatureAnalysis {
         double totalSum = 0;
         int totalCount = 0;
 
+            for (int i = 0; i < days; i++) {
+            int sum = 0;
+            for (int j = 1; j <= 4; j++) {
+                sum += temperatures[i][j]; // Somma le temperature della giornata
 
