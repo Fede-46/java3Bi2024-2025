@@ -34,3 +34,8 @@ public class TemperatureAnalysis {
         // Calcola la media mensile delle temperature
         double monthlyAvg = totalSum / totalCount;
 
+        // Inizializza le variabili per la ricerca della temperatura minima e massima
+        int minTemp = Integer.MAX_VALUE, maxTemp = Integer.MIN_VALUE;
+        int minDay = -1, minHour = -1, maxDay = -1, maxHour = -1;
+        int minCount = 0, maxCount = 0;
+
