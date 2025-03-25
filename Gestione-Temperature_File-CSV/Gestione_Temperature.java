@@ -56,4 +56,17 @@ public class TemperatureAnalysis {
                     minHour = j * 6;
                 }
 
+                 // Se troviamo una temperatura più alta della massima attuale
+                if (temp > maxTemp) {
+                    maxTemp = temp; // Aggiorniamo la temperatura massima
+                    maxDay = temperatures[i][0]; // Memorizziamo il giorno in cui è stata registrata
+                    maxHour = j * 6; // Memorizziamo l'orario corrispondente
+                    maxCount = 1; // Reset del conteggio delle occorrenze
+                } else if (temp == maxTemp) { // Se la temperatura è uguale alla massima già trovata
+                    maxCount++; // Incrementiamo il conteggio delle volte in cui si è registrata
+                }
+            }
+        }
+
+
 
